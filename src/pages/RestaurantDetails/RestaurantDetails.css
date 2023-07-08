@@ -2,3 +2,15 @@
   width: 2.7rem;
   height: 2.7rem;
 }
+
+.back-icon {
+  margin-left: 3rem;
+  margin-top: 1.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.res-details {
+  margin: 0 10rem;
+}

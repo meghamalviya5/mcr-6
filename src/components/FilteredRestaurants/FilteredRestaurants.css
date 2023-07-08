@@ -1,4 +1,30 @@
+.dish-card {
+  border-radius: 0.5rem;
+  border: 1px solid rgb(191, 187, 187);
+}
+
+.black-color {
+  color: black;
+}
+
+.link {
+  text-decoration: none;
+  color: #8b8b8b;
+}
+
 .card-img {
-  width: 15rem;
-  height: 17rem;
+  width: 18rem;
+  height: 16rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.filtered-res-list {
+  margin: 1rem 10rem;
+  text-align: left;
+}
+
+.dish-header {
+  margin: 1.5rem 0;
+  font-size: 1.3rem;
 }

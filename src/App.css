@@ -14,8 +14,8 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   /* padding-top: 40vh; */
 }
 .container .wrapper {
@@ -24,7 +24,7 @@
 .container .info-box {
   user-select: none;
   width: 20rem;
-  background: #ef4f5f;
+  background: rgb(239 79 95);
   font-size: 14px;
   padding: 12px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);

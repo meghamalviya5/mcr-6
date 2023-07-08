@@ -23,23 +23,37 @@ const RestaurantDetails = () => {
   const restaurant = filteredRestaurants.find(
     ({ id }) => id === Number(restaurantID)
   );
+
+  const avgRating = (
+    restaurant?.ratings.reduce((acc, { rating }) => rating + acc, 0) /
+    restaurant?.ratings.length
+  ).toFixed(1);
+
+  console.log(
+    "reduce rating: ",
+    restaurant?.ratings.reduce((acc, { rating }) => rating + acc, 0)
+  );
+  console.log("length rating: ", restaurant?.ratings.length);
+  console.log("avg: ", avgRating);
+
   return (
     <div>
       <div
+        className="txt-left"
         onClick={() => {
-          //dispatch({ type: "UPDATE_SELECTED_CUISINE", payload: -1 });
           filterByCuisineType(-1);
         }}
       >
         <FontAwesomeIcon
           icon={faArrowLeft}
+          className="back-icon"
           onClick={() => {
             navigate(-1);
           }}
         />
       </div>
-      <div>
-        <div>
+      <div className="flex txt-left res-details">
+        <div className="flex flex-col">
           <div>{restaurant?.name}</div>
           <div>
             <div>
@@ -49,10 +63,9 @@ const RestaurantDetails = () => {
               )}
             </div>
             <div>{restaurant?.address}</div>
-            <div>Average Rating: {restaurant?.averageRating}</div>
+            <div>Average Rating: {avgRating}</div>
           </div>
         </div>
-
         <div className="container">
           <div className="wrapper">
             <button
@@ -77,22 +90,28 @@ const RestaurantDetails = () => {
           </div>
         </div>
       </div>
-      <h2>Reviews</h2>
-      {restaurant?.ratings.map(({ rating, comment, revName, pp }) => (
-        <div className="flex">
-          <div>
-            <div className="flex">
-              <img src={pp} alt="profile-pic" className="profile-img br-full" />
-              <h4>{revName}</h4>
+      <div>
+        <h2>Reviews</h2>
+        {restaurant?.ratings.map(({ rating, comment, revName, pp }) => (
+          <div className="flex">
+            <div>
+              <div className="flex">
+                <img
+                  src={pp}
+                  alt="profile-pic"
+                  className="profile-img br-full"
+                />
+                <h4>{revName}</h4>
+              </div>
+              <p>{comment}</p>
             </div>
-            <p>{comment}</p>
+            <div>
+              {rating}
+              <FontAwesomeIcon icon={faStar} />
+            </div>
           </div>
-          <div>
-            {rating}
-            <FontAwesomeIcon icon={faStar} />
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

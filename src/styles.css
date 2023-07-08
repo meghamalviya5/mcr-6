@@ -2,14 +2,46 @@
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-gap-4 {
   gap: 1rem;
 }
 
-.pl-s {
+.p-xs {
+  padding: 0.5rem;
+}
+
+.p-s {
+  padding: 1rem;
+}
+
+.pl-xs {
   padding-left: 0.5rem;
 }
 
 .br-full {
   border-radius: 50%;
+}
+
+.mt-xs {
+  margin-top: 0.5rem;
+}
+
+.mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+.ml-s {
+  margin-left: 1rem;
+}
+
+.mt-none {
+  margin-top: 0;
+}
+
+.txt-left {
+  text-align: left;
 }

@@ -7,7 +7,6 @@ export const RestaurantContext = createContext();
 const RestaurantProvider = ({ children }) => {
   const initialState = {
     restaurantList: restaurantsData,
-    selectedCuisineID: -1,
     filteredRestaurants: [],
     addReviewModalStatus: false,
   };
@@ -22,7 +21,6 @@ const RestaurantProvider = ({ children }) => {
     );
 
     dispatch({ type: "FILTER_BY_CUISINE", payload: foundData });
-    //dispatch({ type: "UPDATE_SELECTED_CUISINE", payload: cuisineID });
   };
 
   const onReviewSubmit = (e, resID) => {
@@ -34,7 +32,7 @@ const RestaurantProvider = ({ children }) => {
       revName: "Alex",
       pp: "https://img.lovepik.com/element/40128/7461.png_1200.png",
       comment: data.get("comment"),
-      rating: data.get("rating"),
+      rating: Number(data.get("rating")),
     };
 
     const restaurant = state.filteredRestaurants.find(

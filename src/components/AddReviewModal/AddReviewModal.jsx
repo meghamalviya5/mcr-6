@@ -29,7 +29,7 @@ const AddReviewModal = (props) => {
       </button>
       {/* <div className="modalContent"> */}
       <form
-        className="add-review-modal flex flex-column p-s flex-gap-2"
+        className="add-review-modal flex flex-column p-xs flex-gap-2"
         method="post"
         onSubmit={(e) => {
           onReviewSubmit(e, props.resID);
