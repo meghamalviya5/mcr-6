@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+}
+
+.flex-gap-4 {
+  gap: 1rem;
+}
+
+.pl-s {
+  padding-left: 0.5rem;
+}
+
+.br-full {
+  border-radius: 50%;
+}
