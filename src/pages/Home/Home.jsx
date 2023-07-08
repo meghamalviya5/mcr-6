@@ -15,7 +15,7 @@ const Home = () => {
         {cuisineData.map(({ id, name }) => (
           <button
             key={id}
-            className="btn-cuisine"
+            className="btn-theme"
             onClick={() => filterByCuisineType(id)}
           >
             {name}

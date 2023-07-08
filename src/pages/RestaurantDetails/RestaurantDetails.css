@@ -12,5 +12,24 @@
 }
 
 .res-details {
-  margin: 0 10rem;
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.res-name {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.txt-grey-color {
+  color: #8b8b8b;
+}
+
+.rating {
+  width: 2rem;
+  height: max-content;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  background-color: green;
+  color: yellow;
 }

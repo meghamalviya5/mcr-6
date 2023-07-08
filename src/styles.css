@@ -10,6 +10,10 @@
   gap: 1rem;
 }
 
+.flex-space-between {
+  justify-content: space-between;
+}
+
 .p-xs {
   padding: 0.5rem;
 }
@@ -36,6 +40,14 @@
 
 .ml-s {
   margin-left: 1rem;
+}
+
+.mr-s {
+  margin-right: 1rem;
+}
+
+.mr-xl {
+  margin-right: 5rem;
 }
 
 .mt-none {
