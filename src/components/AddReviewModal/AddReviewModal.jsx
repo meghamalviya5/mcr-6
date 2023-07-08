@@ -27,39 +27,39 @@ const AddReviewModal = (props) => {
       >
         X
       </button>
-      <div className="modalContent">
-        <form
-          className="add-review-modal flex flex-column p-s flex-gap-2"
-          method="post"
-          onSubmit={(e) => {
-            onReviewSubmit(e, props.resID);
-            dispatch({
-              type: "ADD_REVIEW_MODAL_STATUS",
-              payload: false,
-            });
-          }}
-        >
-          <div>
-            <label htmlFor="rating">Rating: </label>
-            <select name="rating">
-              {rating.map((element) => (
-                <option>{element}</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label htmlFor="comment">Comment:</label>
-            <textarea id="comment" name="comment" rows="2" cols="25" />
-          </div>
-          <div className="flex">
-            <button type="submit" className="flex-center btn-save">
-              Submit
-            </button>
-          </div>
-        </form>
-        {/* </div> */}
-        {/* </div> */}
-      </div>
+      {/* <div className="modalContent"> */}
+      <form
+        className="add-review-modal flex flex-column p-s flex-gap-2"
+        method="post"
+        onSubmit={(e) => {
+          onReviewSubmit(e, props.resID);
+          dispatch({
+            type: "ADD_REVIEW_MODAL_STATUS",
+            payload: false,
+          });
+        }}
+      >
+        <div>
+          <label htmlFor="rating">Rating: </label>
+          <select name="rating">
+            {rating.map((element) => (
+              <option>{element}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="comment">Comment:</label>
+          <textarea id="comment" name="comment" rows="2" cols="25" />
+        </div>
+        <div className="flex">
+          <button type="submit" className="flex-center btn-save">
+            Submit
+          </button>
+        </div>
+      </form>
+      {/* </div> */}
+      {/* </div> */}
+      {/* </div> */}
     </div>
   );
 };
