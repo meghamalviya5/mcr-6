@@ -22,6 +22,10 @@ export const restaurantReducer = (state, action) => {
         restaurantList: updatedRestaurantList,
         filteredRestaurants: updatedFilteresList,
       };
+
+    case "UPDATE_SELECTED_CUISINE":
+      return { ...state, selectedCuisineID: action.payload };
+
     default:
       return { state };
   }
